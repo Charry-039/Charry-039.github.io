@@ -108,4 +108,17 @@
   
   
   
+  
+  
+  <entry>
+    <title>about</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h2 id="这里写关于页的正文，支持-Markdown-HTML"><a href="#这里写关于页的正文，支持-Markdown-HTML" class="headerlink" title="这里写关于页的正文，支持 Markdown, HTML"></a>这里写关于页的正文，支持 Markdown, HTML</h2><ul><li><input checked="" disabled="" type="checkbox"> Acmer</li><li><input checked="" disabled="" type="checkbox"> 追番</li><li><input checked="" disabled="" type="checkbox"> Steam</li><li><input disabled="" type="checkbox"> 日记</li><li></li></ul>]]></content>
+    
+  </entry>
+  
+  
+  
 </search>
