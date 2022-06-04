@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>任意合数n定有一个小于根号n的约数</title>
+    <link href="/2022/06/04/%E4%BB%BB%E6%84%8F%E5%90%88%E6%95%B0n%E5%AE%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BA%8E%E6%A0%B9%E5%8F%B7n%E7%9A%84%E7%BA%A6%E6%95%B0/"/>
+    <url>/2022/06/04/%E4%BB%BB%E6%84%8F%E5%90%88%E6%95%B0n%E5%AE%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BA%8E%E6%A0%B9%E5%8F%B7n%E7%9A%84%E7%BA%A6%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="任意合数n定有一个小于根号n的约数"><a href="#任意合数n定有一个小于根号n的约数" class="headerlink" title="任意合数n定有一个小于根号n的约数"></a>任意合数n定有一个小于根号n的约数</h1><h2 id="证明过程"><a href="#证明过程" class="headerlink" title="证明过程"></a>证明过程</h2><ul><li><p>设此合数为$x$，那么一个合数必定存在两个约数，我们设此约数分别为$a,b (a&lt;b)$</p></li><li><p>即$a*b&#x3D;x$</p></li><li><p>已知$a&lt;b$，</p></li><li><p>则可得$a^2&lt;&#x3D;x$</p></li><li><p>化简：$a&lt;&#x3D;\sqrt x$</p></li></ul><blockquote><p>出处：<a href="https://www.acwing.com/problem/content/198/">AcWing 196</a> y总的视频讲解</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>竞赛算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数论</tag>
+      
+      <tag>证明</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>定语从句</title>
     <link href="/2022/06/01/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/"/>
     <url>/2022/06/01/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
