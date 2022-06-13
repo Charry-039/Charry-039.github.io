@@ -18,15 +18,15 @@
   <meta name="author" content="Charry">
   <meta name="keywords" content="">
   
-    <meta name="description" content="#越狱 监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。 有 m 种宗教，每个犯人可能信仰其中一种。 如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。 求有多少种状态可能发生越狱。 输入格式 共一行，包含两个整数 m 和 n。 输出格式 可能越狱的状态数，对 100003 取余。 数据范围 1≤m≤108 1≤n≤1012 1234输入样例：2 3">
+    <meta name="description" content="越狱监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。有 m 种宗教，每个犯人可能信仰其中一种。如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。求有多少种状态可能发生越狱。输入格式共一行，包含两个整数 m 和 n。输出格式可能越狱的状态数，对 100003 取余。数据范围1≤m≤1081≤n≤1012 1234输入样例：2 3输出样例：6 样例解释所有可能的 6 种状态为：(0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="越狱">
 <meta property="og:url" content="http://example.com/2022/06/06/%E8%B6%8A%E7%8B%B1/index.html">
 <meta property="og:site_name" content="Charry&#39;s Blog">
-<meta property="og:description" content="#越狱 监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。 有 m 种宗教，每个犯人可能信仰其中一种。 如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。 求有多少种状态可能发生越狱。 输入格式 共一行，包含两个整数 m 和 n。 输出格式 可能越狱的状态数，对 100003 取余。 数据范围 1≤m≤108 1≤n≤1012 1234输入样例：2 3">
+<meta property="og:description" content="越狱监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。有 m 种宗教，每个犯人可能信仰其中一种。如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。求有多少种状态可能发生越狱。输入格式共一行，包含两个整数 m 和 n。输出格式可能越狱的状态数，对 100003 取余。数据范围1≤m≤1081≤n≤1012 1234输入样例：2 3输出样例：6 样例解释所有可能的 6 种状态为：(0">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-06T12:03:40.000Z">
-<meta property="article:modified_time" content="2022-06-13T16:46:13.596Z">
+<meta property="article:modified_time" content="2022-06-13T16:47:10.013Z">
 <meta property="article:author" content="Charry">
 <meta property="article:tag" content="快速幂">
 <meta property="article:tag" content="组合计数">
@@ -227,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          663 字
+          662 字
         
       </span>
     
@@ -280,27 +280,9 @@
             
             <div class="markdown-body">
               
-              <p>#越狱</p>
-<h4
-id="监狱有连续编号为-1-到-n-的-n-个房间每个房间关押一个犯人">监狱有连续编号为
-1 到 n 的 n 个房间，每个房间关押一个犯人。</h4>
-<h4 id="有-m-种宗教每个犯人可能信仰其中一种">有 m
-种宗教，每个犯人可能信仰其中一种。</h4>
-<h4
-id="如果相邻房间的犯人信仰的宗教相同就可能发生越狱">如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。</h4>
-<h4 id="求有多少种状态可能发生越狱">求有多少种状态可能发生越狱。</h4>
-<h4 id="输入格式">输入格式</h4>
-<h4 id="共一行包含两个整数-m-和-n">共一行，包含两个整数 m 和 n。</h4>
-<h4 id="输出格式">输出格式</h4>
-<h4 id="可能越狱的状态数对-100003-取余">可能越狱的状态数，对 100003
-取余。</h4>
-<h4 id="数据范围">数据范围</h4>
-<p><code>1≤m≤108</code> <code>1≤n≤1012</code></p>
+              <h1 id="越狱"><a href="#越狱" class="headerlink" title="越狱"></a>越狱</h1><h4 id="监狱有连续编号为-1-到-n-的-n-个房间，每个房间关押一个犯人。"><a href="#监狱有连续编号为-1-到-n-的-n-个房间，每个房间关押一个犯人。" class="headerlink" title="监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。"></a>监狱有连续编号为 1 到 n 的 n 个房间，每个房间关押一个犯人。</h4><h4 id="有-m-种宗教，每个犯人可能信仰其中一种。"><a href="#有-m-种宗教，每个犯人可能信仰其中一种。" class="headerlink" title="有 m 种宗教，每个犯人可能信仰其中一种。"></a>有 m 种宗教，每个犯人可能信仰其中一种。</h4><h4 id="如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。"><a href="#如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。" class="headerlink" title="如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。"></a>如果相邻房间的犯人信仰的宗教相同，就可能发生越狱。</h4><h4 id="求有多少种状态可能发生越狱。"><a href="#求有多少种状态可能发生越狱。" class="headerlink" title="求有多少种状态可能发生越狱。"></a>求有多少种状态可能发生越狱。</h4><h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><h4 id="共一行，包含两个整数-m-和-n。"><a href="#共一行，包含两个整数-m-和-n。" class="headerlink" title="共一行，包含两个整数 m 和 n。"></a>共一行，包含两个整数 m 和 n。</h4><h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><h4 id="可能越狱的状态数，对-100003-取余。"><a href="#可能越狱的状态数，对-100003-取余。" class="headerlink" title="可能越狱的状态数，对 100003 取余。"></a>可能越狱的状态数，对 100003 取余。</h4><h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p><code>1≤m≤108</code><br><code>1≤n≤1012</code></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">输入样例：<br>2 3<br>输出样例：<br>6<br></code></pre></td></tr></table></figure>
-<h5 id="样例解释">样例解释</h5>
-<h5 id="所有可能的-6-种状态为000001011100110111">所有可能的 6
-种状态为：(000)(001)(011)(100)(110)(111)。</h5>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;iostream&quot;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> mod = <span class="hljs-number">100003</span>;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">quick_pow</span><span class="hljs-params">(ll base, ll pow)</span> </span>&#123;<br>    ll res = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> (pow) &#123;<br>        <span class="hljs-keyword">if</span> (pow &amp; <span class="hljs-number">1</span>) res = (res * base) % mod;<br>        pow &gt;&gt;= <span class="hljs-number">1</span>;<br>        base = (base * base) % mod;<br>    &#125;<br>    <span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    ll n, m;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>, &amp;m, &amp;n);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>, (<span class="hljs-built_in">quick_pow</span>(m, n) - m * <span class="hljs-built_in">quick_pow</span>(m - <span class="hljs-number">1</span>, n - <span class="hljs-number">1</span>) % mod + mod) % mod);<br>    <span class="hljs-comment">//例如模数是 10，那么 11 - 8 取模以后就是 1 - 8 是负数</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h5 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h5><h5 id="所有可能的-6-种状态为：-000-001-011-100-110-111-。"><a href="#所有可能的-6-种状态为：-000-001-011-100-110-111-。" class="headerlink" title="所有可能的 6 种状态为：(000)(001)(011)(100)(110)(111)。"></a>所有可能的 6 种状态为：(000)(001)(011)(100)(110)(111)。</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;iostream&quot;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> mod = <span class="hljs-number">100003</span>;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">quick_pow</span><span class="hljs-params">(ll base, ll pow)</span> </span>&#123;<br>    ll res = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> (pow) &#123;<br>        <span class="hljs-keyword">if</span> (pow &amp; <span class="hljs-number">1</span>) res = (res * base) % mod;<br>        pow &gt;&gt;= <span class="hljs-number">1</span>;<br>        base = (base * base) % mod;<br>    &#125;<br>    <span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    ll n, m;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>, &amp;m, &amp;n);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>, (<span class="hljs-built_in">quick_pow</span>(m, n) - m * <span class="hljs-built_in">quick_pow</span>(m - <span class="hljs-number">1</span>, n - <span class="hljs-number">1</span>) % mod + mod) % mod);<br>    <span class="hljs-comment">//例如模数是 10，那么 11 - 8 取模以后就是 1 - 8 是负数</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
