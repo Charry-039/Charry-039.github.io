@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>区间选点</title>
+    <link href="/2022/06/19/%E5%8C%BA%E9%97%B4%E9%80%89%E7%82%B9/"/>
+    <url>/2022/06/19/%E5%8C%BA%E9%97%B4%E9%80%89%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="区间选点">区间选点</h1><p>给定 <strong>N</strong> 个闭区间 [<spanclass="math inline">\(a_i,b_i\)</span>]，请你在数轴上选择尽量少的点，使得每个区间内至少包含一个选出的点。</p><p>输出选择的点的最小数量。</p><p>位于区间端点上的点也算作区间内。</p><h4 id="输入格式">输入格式</h4><p>第一行包含整数 <strong>N</strong>，表示区间数。</p><p>接下来 <strong>N</strong> 行，每行包含两个整数 <strong><spanclass="math inline">\(a_i\)</span></strong>,<strong><spanclass="math inline">\(b_i\)</span></strong>,表示一个区间的两个端点。</p><h4 id="输出格式">输出格式</h4><p>输出一个整数，表示可选取区间的最大数量。</p><h4 id="数据范围">数据范围</h4><h4 id="输入样例">输入样例</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">3<br>-1 1<br>2 4<br>3 5<br></code></pre></td></tr></table></figure><h4 id="输出样例">输出样例</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">2<br></code></pre></td></tr></table></figure><h1 id="解法">解法：</h1><p><strong>目的:用尽可能少的点覆盖所有区间</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;iostream&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;algorithm&quot;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N =<span class="hljs-number">100010</span>;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Range</span>&#123;<br>    <span class="hljs-type">int</span> l,r;<br>    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Range &amp;w)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>-&gt;r&lt;w.r;<br>    &#125;<br>&#125;;<br><br>Range range[N];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;n);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;range[i].l,&amp;range[i].r);<br>    <span class="hljs-built_in">sort</span>(range+<span class="hljs-number">1</span>,range+n+<span class="hljs-number">1</span>);<br>    <span class="hljs-type">int</span> res=<span class="hljs-number">0</span>,end=<span class="hljs-number">-2e9</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-keyword">if</span> (end&lt;range[i].l)&#123;<br>            end=range[i].r;<br>            ++res;<br>        &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,res);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>竞赛算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>贪心</tag>
+      
+      <tag>区间问题</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>越狱</title>
     <link href="/2022/06/06/%E8%B6%8A%E7%8B%B1/"/>
     <url>/2022/06/06/%E8%B6%8A%E7%8B%B1/</url>
@@ -60,7 +87,7 @@
     <link href="/2022/06/04/%E4%BB%BB%E6%84%8F%E5%90%88%E6%95%B0n%E5%AE%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BA%8E%E6%A0%B9%E5%8F%B7n%E7%9A%84%E7%BA%A6%E6%95%B0/"/>
     <url>/2022/06/04/%E4%BB%BB%E6%84%8F%E5%90%88%E6%95%B0n%E5%AE%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BA%8E%E6%A0%B9%E5%8F%B7n%E7%9A%84%E7%BA%A6%E6%95%B0/</url>
     
-    <content type="html"><![CDATA[<h1 id="任意合数n定有一个小于根号n的约数"><a href="#任意合数n定有一个小于根号n的约数" class="headerlink" title="任意合数n定有一个小于根号n的约数"></a>任意合数n定有一个小于根号n的约数</h1><h2 id="证明过程"><a href="#证明过程" class="headerlink" title="证明过程"></a>证明过程</h2><p>设此合数为$x$，那么一个合数必定存在两个约数，我们设此约数分别为a,b $(a&lt;b)$。</p><p>即 $a*b=x$</p><p>已知 $a&lt;b$</p><p>则可得 $a^2&lt;=x$</p><p>化简：$a&lt;=\sqrt(x)$</p><blockquote><p>出处：<a href="https://www.acwing.com/problem/content/198/">AcWing 196</a> y总的视频讲解</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1id="任意合数n定有一个小于根号n的约数">任意合数n定有一个小于根号n的约数</h1><h2 id="证明过程">证明过程</h2><p>设此合数为<spanclass="math inline">\(x\)</span>，那么一个合数必定存在两个约数，我们设此约数分别为a,b<span class="math inline">\((a&lt;b)\)</span>。</p><p>即 <span class="math inline">\(a*b=x\)</span></p><p>已知 <span class="math inline">\(a&lt;b\)</span></p><p>则可得 <span class="math inline">\(a^2&lt;=x\)</span></p><p>化简：<span class="math inline">\(a&lt;=\sqrt(x)\)</span></p><blockquote><p>出处：<a href="https://www.acwing.com/problem/content/198/">AcWing196</a> y总的视频讲解</p></blockquote>]]></content>
     
     
     <categories>
