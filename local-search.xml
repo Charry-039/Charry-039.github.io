@@ -365,7 +365,7 @@
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="咸鱼大学生">咸鱼大学生</h3><ul class="task-list"><li><input type="checkbox" disabled="" checked="" />划水Acmer</li><li><input type="checkbox" disabled="" checked="" />追番</li><li><input type="checkbox" disabled="" checked="" />Steam</li><li><input type="checkbox" disabled="" checked="" />嘉心糖</li><li><input type="checkbox" disabled="" checked="" />日记</li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="咸鱼大学生">咸鱼大学生</h3><p><del><code>emo自动机</code></del></p><ul class="task-list"><li><input type="checkbox" disabled="" checked="" />划水Acmer</li><li><input type="checkbox" disabled="" checked="" />Steam</li><li><input type="checkbox" disabled="" checked="" />追番</li><li><input type="checkbox" disabled="" checked="" />日记</li><li><input type="checkbox" disabled="" checked="" />嘉心糖</li></ul>]]></content>
     
   </entry>
   
