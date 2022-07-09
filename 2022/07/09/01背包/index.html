@@ -16,22 +16,26 @@
   <meta name="author" content="Charry">
   <meta name="keywords" content="">
   
-    <meta name="description" content="(c++) 结构体排序： 利用重载运算符operator 1234567struct Range&amp;#123;    int l,r;    bool operator &lt; (const Range &amp;t)&amp;#123;        return this-&gt;r&lt;ranget.r;&#x2F;&#x2F;按右端点r进行排序    &amp;#125;&amp;#125;range[N];sort(rang">
+    <meta name="description" content="每件物品只能使用一次 01背包的理解  引用自b站的评论  二维解法： 123456789101112131415161718192021222324#include&lt;iostream&gt;using namespace std;&#x2F;&#x2F;二维解法const int N &#x3D; 1010;int dp[N][N];int w[N];int v[N];int main() &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="结构体&#x2F;类排序">
-<meta property="og:url" content="http://example.com/2022/07/08/%E7%BB%93%E6%9E%84%E4%BD%93-%E7%B1%BB%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:title" content="01背包">
+<meta property="og:url" content="http://example.com/2022/07/09/01%E8%83%8C%E5%8C%85/index.html">
 <meta property="og:site_name" content="Charry&#39;s Blog">
-<meta property="og:description" content="(c++) 结构体排序： 利用重载运算符operator 1234567struct Range&amp;#123;    int l,r;    bool operator &lt; (const Range &amp;t)&amp;#123;        return this-&gt;r&lt;ranget.r;&#x2F;&#x2F;按右端点r进行排序    &amp;#125;&amp;#125;range[N];sort(rang">
+<meta property="og:description" content="每件物品只能使用一次 01背包的理解  引用自b站的评论  二维解法： 123456789101112131415161718192021222324#include&lt;iostream&gt;using namespace std;&#x2F;&#x2F;二维解法const int N &#x3D; 1010;int dp[N][N];int w[N];int v[N];int main() &amp;#123;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T08:57:30.000Z">
-<meta property="article:modified_time" content="2022-07-08T09:42:41.821Z">
+<meta property="og:image" content="https://img.charry233.xyz/20220709204921.png">
+<meta property="og:image" content="https://img.charry233.xyz/20220709204930.png">
+<meta property="article:published_time" content="2022-07-09T12:47:40.000Z">
+<meta property="article:modified_time" content="2022-07-09T13:38:58.075Z">
 <meta property="article:author" content="Charry">
-<meta property="article:tag" content="编程语法">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="背包问题">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img.charry233.xyz/20220709204921.png">
   
   
   
-  <title>结构体/类排序 - Charry&#39;s Blog</title>
+  <title>01背包 - Charry&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +224,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="结构体/类排序"></span>
+            <span id="subtitle" data-typed-text="01背包"></span>
           
         </div>
 
@@ -236,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-08 16:57" pubdate>
-          2022年7月8日 下午
+        <time datetime="2022-07-09 20:47" pubdate>
+          2022年7月9日 晚上
         </time>
       </span>
     
@@ -248,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          685 字
+          1.3k 字
         
       </span>
     
@@ -259,7 +263,7 @@
         
         
         
-          6 分钟
+          11 分钟
         
       </span>
     
@@ -297,17 +301,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">结构体/类排序</h1>
+            <h1 style="display: none">01背包</h1>
             
             <div class="markdown-body">
               
-              <h3 id="c-结构体排序">(c++) 结构体排序：</h3>
-<p>利用重载运算符operator</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Range</span>&#123;<br>    <span class="hljs-type">int</span> l,r;<br>    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> Range &amp;t)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>-&gt;r&lt;ranget.r;<span class="hljs-comment">//按右端点r进行排序</span><br>    &#125;<br>&#125;range[N];<br><span class="hljs-built_in">sort</span>(range,range+n);<br></code></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Range</span>&#123;<br>    <span class="hljs-type">int</span> x,y,z;<br>    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> Range &amp;t)&#123;<br>        <span class="hljs-comment">//排序优先级分别为x,y,z</span><br>        <span class="hljs-keyword">if</span>(x！=t.x) <span class="hljs-keyword">return</span> x&lt;t.x<br>        <span class="hljs-keyword">if</span>(y!=t.y)<span class="hljs-keyword">return</span> y&lt;t.y;<br>        <span class="hljs-keyword">return</span> z&lt;t.z;<br>    &#125;<br>&#125;range[N];<br><span class="hljs-built_in">sort</span>(range,range+n);<br></code></pre></td></tr></table></figure>
-<h3 id="java-类排序">(java) 类排序</h3>
-<p>利用list类做容器存储类，再用其类库函数实现排序</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[]args)</span>&#123;<br>   ArrayList&lt;pii&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>   list.sort((o1,o2)-&gt;o1.l-o2.l);<span class="hljs-comment">//以左端点l升序排序</span><br>   list.sort((o1,o2)-&gt;o2.r-o1.r);<span class="hljs-comment">//以右端点r降序排序</span><br>&#125;<br><br><span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">pii</span> &#123;<br>  <span class="hljs-type">int</span> l, r;<br>  pii(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r) &#123;<br>      <span class="hljs-built_in">this</span>.l = l;<br>      <span class="hljs-built_in">this</span>.r = r;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+              <p>每件物品只能使用一次</p>
+<p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/zyacmer/p/9961710.html">01背包的理解</a></p>
+<p><img src="https://img.charry233.xyz/20220709204921.png" srcset="/img/loading.gif" lazyload /></p>
+<p>引用自b站的评论</p>
+<p><img src="https://img.charry233.xyz/20220709204930.png" srcset="/img/loading.gif" lazyload /></p>
+<p>二维解法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//二维解法</span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1010</span>;<br><span class="hljs-type">int</span> dp[N][N];<br><span class="hljs-type">int</span> w[N];<br><span class="hljs-type">int</span> v[N];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n, weight;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;n, &amp;weight);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;w[i], &amp;v[i]);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = weight; j &gt;= <span class="hljs-number">1</span>; j--)<br>            <span class="hljs-keyword">if</span> (j &lt; w[i]) dp[i][j] = dp[i - <span class="hljs-number">1</span>][j];<br>            <span class="hljs-keyword">else</span> dp[i][j] = <span class="hljs-built_in">max</span>(dp[i - <span class="hljs-number">1</span>][j], dp[i - <span class="hljs-number">1</span>][j - w[i]] + v[i]);<br><br>    cout &lt;&lt; dp[n][weight] &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>优化后：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//一维解法</span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1010</span>;<br><span class="hljs-type">int</span> dp[N];<br><span class="hljs-type">int</span> w[N];<br><span class="hljs-type">int</span> v[N];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n, weight;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;n, &amp;weight);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;w[i], &amp;v[i]);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = weight; j &gt;= w[i]; j--)<br>            dp[j] = <span class="hljs-built_in">max</span>(dp[j], dp[j - w[i]] + v[i]);<br><br>    cout &lt;&lt; dp[weight];<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>先遍历物品的解法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//先遍历物品，再遍历容量</span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1010</span>;<br><span class="hljs-type">int</span> dp[N][N];<br><span class="hljs-type">int</span> w[N];<br><span class="hljs-type">int</span> v[N];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n, weight;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;n, &amp;weight);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;w[i], &amp;v[i]);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= weight; i++)<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= n; j++)<br>            <span class="hljs-keyword">if</span> (i - w[j] &lt; <span class="hljs-number">0</span>) dp[j][i] = dp[j - <span class="hljs-number">1</span>][i];<br>            <span class="hljs-keyword">else</span> dp[j][i] = <span class="hljs-built_in">max</span>(dp[j - <span class="hljs-number">1</span>][i], dp[j - <span class="hljs-number">1</span>][i - w[j]] + v[j]);<br>    cout &lt;&lt; dp[n][weight];<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
@@ -340,7 +349,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/">#编程语法</a>
+        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+      
+        <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">#背包问题</a>
       
     </div>
   
@@ -352,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>结构体/类排序</div>
-      <div>http://example.com/2022/07/08/结构体-类排序/</div>
+      <div>01背包</div>
+      <div>http://example.com/2022/07/09/01背包/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月8日</div>
+          <div>2022年7月9日</div>
         </div>
       
       
@@ -395,9 +406,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/07/09/01%E8%83%8C%E5%8C%85/" title="01背包">
+                      <a href="/2022/07/09/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="完全背包问题">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">01背包</span>
+                        <span class="hidden-mobile">完全背包问题</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -405,8 +416,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/19/%E5%8C%BA%E9%97%B4%E9%80%89%E7%82%B9/" title="区间选点">
-                        <span class="hidden-mobile">区间选点</span>
+                      <a href="/2022/07/08/%E7%BB%93%E6%9E%84%E4%BD%93-%E7%B1%BB%E6%8E%92%E5%BA%8F/" title="结构体/类排序">
+                        <span class="hidden-mobile">结构体/类排序</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
